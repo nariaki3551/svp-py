@@ -96,6 +96,7 @@ class Lattice:
         """Randomize this lattice basis and reset mu and B"""
         self.basis = randomized(self.basis, seed, scale=scale, U=U)
         self.set_gso_data()
+        return self
 
 
 def randomized(basis, seed, scale=3, U=None):
